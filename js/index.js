@@ -84,7 +84,7 @@ function diffTime(date1, date2) {
 }
 
 function formatElapsed(elapsed) {
-  var hours = Math.trunc(elapsed / (1000 * 60 * 60)) % 24;
+  var hours = Math.trunc(elapsed / (1000 * 60 * 60));
   var minutes = Math.trunc(elapsed / (1000 * 60)) % 60;
   //console.log(formatNumber(hours) + ":" + formatNumber(minutes));
   return formatNumber(hours) + ":" + formatNumber(minutes);
