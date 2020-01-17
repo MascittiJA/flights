@@ -1,27 +1,7 @@
-function selectDate(selector) {
-  $selector = "#" + selector;
-  $spanSelector = $selector.replace("circle", "span");
-  var current = $selector.replace("circle", "");
-
-  $(".active").removeClass("active");
-  $($selector).addClass("active");
-
-  if ($($spanSelector).hasClass("right")) {
-    $(".center").removeClass("center").addClass("left")
-    $($spanSelector).addClass("center");
-    $($spanSelector).removeClass("right")
-  } else if ($($spanSelector).hasClass("left")) {
-    $(".center").removeClass("center").addClass("right");
-    $($spanSelector).addClass("center");
-    $($spanSelector).removeClass("left");
-  };
-};
-
 //form initialization
-function setDateForm() {
+function setInitDateForm() {
   var today = new Date();
   var firstRTA = addMinutes(today,120);
-
   document.getElementById("dateInputETD").value = getDate(today);
   document.getElementById("timeInputETD").value = getTime(today);
   document.getElementById("dateInputRTA").value = getDate(firstRTA);
@@ -162,6 +142,30 @@ function makeCircles() {
   selectDate('circle2');
 }
 
-setDateForm();
+function selectDate(selector) {
+  $selector = "#" + selector;
+  $spanSelector = $selector.replace("circle", "span");
+  var current = $selector.replace("circle", "");
+
+  $(".active").removeClass("active");
+  $($selector).addClass("active");
+
+  if ($($spanSelector).hasClass("right")) {
+    $(".center").removeClass("center").addClass("left")
+    $($spanSelector).addClass("center");
+    $($spanSelector).removeClass("right")
+  } else if ($($spanSelector).hasClass("left")) {
+    $(".center").removeClass("center").addClass("right");
+    $($spanSelector).addClass("center");
+    $($spanSelector).removeClass("left");
+  };
+};
+
+
+/*
+  Execute Code
+*/
+
+setInitDateForm();
 
 makeCircles();

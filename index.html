@@ -3,63 +3,48 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Flight</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
+
+  <title>Flight</title>
 </head>
 
 <body>
 
-  <div id="data-class">
-    <table>
-      <tr>
-        <td>
-          <form>
+  <div class="data-class">
+          <form class="form-class">
             <div>
               <input type="checkbox" id="rest" onchange="makeCircles()">
               <label for="rest">¿Descanso a bordo?</label>
             </div>
-            <table>
-              <tr>
-                <th>ETD</th>
-                <th>RTA</th>
-              </tr>
-              <tr>
-                <td>
-                  <div>
-                    <input type="date" placeholder="Fecha" id="dateInputETD" onchange="makeCircles()"><br>
-                    <input type="time" placeholder="Hora" id="timeInputETD" onchange="makeCircles()"><br>
-                  </div>
-                </td>
-                <td>
-                  <div>
-                    <input type="date" placeholder="Fecha" id="dateInputRTA" onchange="makeCircles()"><br>
-                    <input type="time" placeholder="Hora" id="timeInputRTA" onchange="makeCircles()"><br>
-                  </div>
-                </td>
-              </tr>
-            </table>
+            <div class="etd" style="text-align:center">
+              <h2>ETD</h2>
+              <input type="date" placeholder="Fecha" id="dateInputETD" onchange="makeCircles()"><br>
+              <input type="time" placeholder="Hora" id="timeInputETD" onchange="makeCircles()"><br>
+            </div>
+            <div class="rta" style="text-align:center">
+              <h2>RTA</h2>
+              <input type="date" placeholder="Fecha" id="dateInputRTA" onchange="makeCircles()"><br>
+              <input type="time" placeholder="Hora" id="timeInputRTA" onchange="makeCircles()"><br>
+            </div>
           </form>
-        </td>
-        <td>
-          <table id="tablita">
-            <caption>Fligth Times</caption>
+
+          <table id="tablita" class="table-class">
             <tr>
               <th>TV</th>
               <th>TSV LEY</th>
               <th>TSV CCT</th>
             </tr>
             <tr>
-              <td id="tvField">2</td>
-              <td id="tsvLField">3</td>
-              <td id="tsvCField">4</td>
+              <td style="text-align:center" id="tvField">2</td>
+              <td style="text-align:center" id="tsvLField">3</td>
+              <td style="text-align:center" id="tsvCField">4</td>
             </tr>
           </table>
-        </td>
-      </tr>
-    </table>
   </div>
 
-    <div id="lineCont">
+    <div id="lineCont" class="lineCont">
       <div id="line"></div>
       <div id="span"></div>
     </div>

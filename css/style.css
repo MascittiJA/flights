@@ -7,18 +7,13 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background: #e97162;
-/*  background: #00B4DB;  /* fallback for old browsers */
+  background: #00B4DB;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   font-family: Arial;
   overflow: hidden;
 }
 
-#data-class {
-  width: 50%;
-  margin: 0 auto;
-}
 
 #lineCont {
   width: 100%;
@@ -103,7 +98,7 @@ body {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 30%;
+  top: 10%;
   transition: all 0.2s ease-out;
 }
 #mainCont span.right {
@@ -114,4 +109,68 @@ body {
 }
 #mainCont span.left {
   left: -100%;
+}
+
+
+
+.form-class{
+  padding-top: 10px;
+}
+
+.etd {
+  width: 100%;
+  float: left;
+}
+.rta {
+  width: 100%;
+  float: right;
+}
+
+.table-class{
+  padding-top: 20px;
+  width: 100%;
+}
+
+.lineCont{
+  padding-top: 0px;
+}
+
+@media only screen and (min-width: 768px) {
+  .form-class{
+    width: 50%;
+    float: left;
+  }
+
+  .etd {
+    width: 50%;
+  }
+  .rta {
+    width: 50%;
+  }
+
+  .table-class{
+    width: 50%;
+    float: right;
+    padding-top: 75px;
+  }
+
+  .lineCont{
+    padding-top: 250px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .form-class{
+    padding-top: 50px;
+    width: 600px;
+  }
+
+  .table-class{
+    padding-top: 110px;
+    width: 600px;
+  }
+
+  .lineCont{
+    padding-top: 300px;
+  }
 }
